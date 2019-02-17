@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EDIT FLAVOR</title>
+
+</head>
+<body>
+	<div>
+		<h1>EDIT FLAVOR</h1>
+		{{icecream['id']}}
+		<form action="/edit/{{icecream['id']}}" method="post" >
+			Name:<input type="text" name="name_input" value="{{icecream['name']}}">
+			DESC: <textarea name="input_description">{{icecream['description']}}</textarea>
+			<a href="/update/{{session.user_id}}">SUBMIT</a>
+		</form>
+	</div>
+</body>
+</html>

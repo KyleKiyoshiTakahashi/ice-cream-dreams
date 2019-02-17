@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN REGISTRATION</title>
+</head>
+<body>
+	<div>
+		<h1>Register</h1>
+		<form action="/register" method="post">
+			First Name: <input type="text" name="first_name">
+			Last Name: <input type="text" name="last_name">
+			Email: <input type="text" name="email">
+			Password: <input type="text" name="password">
+			Confirm Passwrod: <input type="text" name="c_password">
+			<input type="submit" value="Register">
+		</form>
+		<hr>
+		<h1>Login</h1>
+		<form action="/login" method="post">
+			Email: <input type="text" name="email">
+			Password: <input type="text" name="password">
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>

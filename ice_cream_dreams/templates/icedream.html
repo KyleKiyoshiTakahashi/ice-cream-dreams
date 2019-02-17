@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<style> 
+
+#left{
+	display: inline-block;
+	vertical-align: top;
+}
+#right{
+	display: inline-block;
+}
+</style>
+<head>
+	<title>ICEDREAM</title>
+</head>
+<body>
+	<h1>ICE CREAM DREAMS</h1>
+	<div id="left">
+		
+		<h3>Add Ice Cream</h3>
+		<form action="/add/{{session.user_id}}" method="post">
+			Name: <input type="text" name="name">
+			Description: <textarea name="description"></textarea>
+			<input type="submit" value="ADD">
+		</form>
+	</div>
+	<div id="right">
+		<h3>All Flavors</h3>
+		<!-- {likecount} -->
+			{% for icecream in icecreams %}
+			<div>
+				
+				Name:<p>{{icecream['name']}}</p>
+				Desc:<p>{{icecream['description']}}</p>
+				<!-- <input type="submit" value="{like or unlike}"> -->
+				<a href="/edit/{{icecream['id']}}">Edit</a>
+				<a href="/delete/{{icecream['id']}}">Delete</a>
+			<hr>
+				
+			</div>
+			{% endfor %}
+	</div>
+
+</body>
+</html>
